@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/quiz">
+ 	
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="180sp"
+        android:layout_alignLeft="@+id/buttonA"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/buttonA"
+        android:paddingBottom="5dp"
+        android:background="@drawable/textshape"
+        android:text="20sp"
+        android:textColor="#000000"
+        android:maxLines = "6"
+        android:scrollbars = "vertical"
+        android:textSize="20sp"/>
+    
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/buttonshape" />
+    
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="300dp"
+    	android:layout_height="50dp"
+        android:layout_below="@+id/buttonA"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonshape"/>
+ 
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="300dp"
+    	android:layout_height="50dp"
+        android:layout_below="@+id/buttonB"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonshape"/>
+ 
+    <Button
+        android:id="@+id/buttonD"
+        android:layout_width="300dp"
+    	android:layout_height="50dp"
+        android:layout_below="@+id/buttonC"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonshape"/>
+	
+    
+    
+    <Button
+        android:id="@+id/passButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/buttonD"
+        android:layout_alignBaseline="@+id/passButton"
+        android:layout_alignBottom="@+id/passButton"
+        android:layout_alignRight="@+id/buttonD"
+        android:text="@string/pass"
+        android:background="@drawable/buttonshape2" />
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/buttonD"
+        android:layout_alignLeft="@+id/buttonD"
+        android:text="@string/submit"
+        android:background="@drawable/buttonshape3" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:background="#AAFFFFFF"
+        android:text="-" />
+    
+</RelativeLayout>
+
+
+<!-- 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical" 
+			android:background="@drawable/quiz">
+
+
+
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginBottom="110dp"
+    android:background="@drawable/textshape"
+    android:gravity="bottom"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+
+    <TableRow android:layout_marginBottom="8dp" android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/buttonA"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="Dinos"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/buttonB"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="John"
+            android:textSize="13sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/buttonC"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="Paris"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/buttonD"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:text="Thanasis"
+            android:textSize="13sp" />
+    </TableRow>
+    <TableRow
+        android:layout_height="match_parent" >
+       <TextView />
+        </TableRow>
+    
+    <TableRow
+        android:layout_height="match_parent"
+        android:layout_marginBottom="3dp" >
+    
+    <Button
+            android:id="@+id/passButton"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/buttonshape2"
+            android:gravity="center"
+            android:text="PASS"
+            android:textSize="13sp" />
+
+	<Button
+            android:id="@+id/submitButton"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/buttonshape3"
+            android:gravity="center"
+            android:text="SUBMIT"
+            android:textSize="13sp" />
+</TableRow>
+    
+</TableLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/punteggio"
+    android:layout_marginTop="24dp"
+    android:background="@drawable/textshape"
+    android:shrinkColumns="*"
+    android:minHeight="100dp"
+    android:stretchColumns="*" >
+
+   
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginStart="7dp"
+            android:text="Who is the best TEI student?" />
+    
+</RelativeLayout>
+
+</RelativeLayout>
+ -->
